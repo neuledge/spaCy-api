@@ -297,4 +297,6 @@ Output:
 
 ## License
 
-[MIT License](LICENSE) Ⓒ 2018 Neuledge 
+[MIT License](LICENSE) Ⓒ 2018 Neuledge
+
+Basic format and parsing from [spacy-nlp](https://github.com/kengz/spacy-nlp) library.
