@@ -22,15 +22,43 @@ def parse_tree(text: str, merge: bool=False):
 
 
 def parse_token_(token):
-    return {
-        "word": token.text,
-        "lemma": token.lemma_,
-        "entType": token.ent_type_,
-        "tag": token.tag_,
-        "pos": token.pos_,
-        "dep": token.dep_,
-        "children": [parse_token_(child) for child in token.children],
+    obj = {
+        'word': token.text,
+        'lemma': token.lemma_,
+        # 'norm': token.norm_,
+        # 'shape': token.shape_,
+        # 'lower': token.lower_,
+        'entityType': token.ent_type_ or None,
+        'POS': token.pos_,
+        'tag': token.tag_,
+        'relation': token.dep_,
+        'index': token.i,
+        'isStopWord': token.is_stop,
+        # 'isOOV': token.is_oov,
+        'children': [parse_token_(child) for child in token.children],
     }
+
+    if token.is_punct:
+        obj['punct'] = {}
+
+        if token.is_quote:
+            obj['punct']['type'] = 'quote'
+        elif token.is_bracket:
+            obj['punct']['type'] = 'bracket'
+        else:
+            obj['punct']['type'] = None
+
+        if token.is_left_punct:
+            if token.is_right_punct:
+                obj['punct']["direction"] = "both"
+            else:
+                obj['punct']["direction"] = "left"
+        elif token.is_right_punct:
+            obj['punct']["direction"] = "right"
+        else:
+            obj['punct']["direction"] = None
+
+    return obj
 
 
 if __name__ == '__main__':

@@ -25,44 +25,54 @@ Output:
     {
         "word": "brought",
         "lemma": "bring",
-        "entType": "",
+        "entityType": null,
+        "POS": "VERB",
         "tag": "VBD",
-        "pos": "VERB",
-        "dep": "ROOT",
+        "relation": "ROOT",
+        "index": 1,
+        "isStopWord": false,
         "children": [
             {
                 "word": "Bob",
                 "lemma": "bob",
-                "entType": "PERSON",
+                "entityType": "PERSON",
+                "POS": "PROPN",
                 "tag": "NNP",
-                "pos": "PROPN",
-                "dep": "nsubj",
+                "relation": "nsubj",
+                "index": 0,
+                "isStopWord": false,
                 "children": []
             },
             {
                 "word": "the pizza",
                 "lemma": "the pizza",
-                "entType": "",
+                "entityType": null,
+                "POS": "NOUN",
                 "tag": "NN",
-                "pos": "NOUN",
-                "dep": "dobj",
+                "relation": "dobj",
+                "index": 2,
+                "isStopWord": false,
                 "children": []
             },
             {
                 "word": "to",
                 "lemma": "to",
-                "entType": "",
+                "entityType": null,
+                "POS": "ADP",
                 "tag": "IN",
-                "pos": "ADP",
-                "dep": "dative",
+                "relation": "dative",
+                "index": 3,
+                "isStopWord": true,
                 "children": [
                     {
                         "word": "Alice",
                         "lemma": "alice",
-                        "entType": "PERSON",
+                        "entityType": "PERSON",
+                        "POS": "PROPN",
                         "tag": "NNP",
-                        "pos": "PROPN",
-                        "dep": "pobj",
+                        "relation": "pobj",
+                        "index": 4,
+                        "isStopWord": false,
                         "children": []
                     }
                 ]
@@ -70,55 +80,71 @@ Output:
             {
                 "word": ".",
                 "lemma": ".",
-                "entType": "",
+                "entityType": null,
+                "POS": "PUNCT",
                 "tag": ".",
-                "pos": "PUNCT",
-                "dep": "punct",
-                "children": []
+                "relation": "punct",
+                "index": 5,
+                "isStopWord": false,
+                "children": [],
+                "punct": {
+                    "type": null,
+                    "direction": null
+                }
             }
         ]
     },
     {
         "word": "saw",
         "lemma": "see",
-        "entType": "",
+        "entityType": null,
+        "POS": "VERB",
         "tag": "VBD",
-        "pos": "VERB",
-        "dep": "ROOT",
+        "relation": "ROOT",
+        "index": 7,
+        "isStopWord": false,
         "children": [
             {
                 "word": "I",
                 "lemma": "-PRON-",
-                "entType": "",
+                "entityType": null,
+                "POS": "PRON",
                 "tag": "PRP",
-                "pos": "PRON",
-                "dep": "nsubj",
+                "relation": "nsubj",
+                "index": 6,
+                "isStopWord": false,
                 "children": []
             },
             {
                 "word": "the man",
                 "lemma": "the man",
-                "entType": "",
+                "entityType": null,
+                "POS": "NOUN",
                 "tag": "NN",
-                "pos": "NOUN",
-                "dep": "dobj",
+                "relation": "dobj",
+                "index": 8,
+                "isStopWord": false,
                 "children": []
             },
             {
                 "word": "with",
                 "lemma": "with",
-                "entType": "",
+                "entityType": null,
+                "POS": "ADP",
                 "tag": "IN",
-                "pos": "ADP",
-                "dep": "prep",
+                "relation": "prep",
+                "index": 9,
+                "isStopWord": true,
                 "children": [
                     {
                         "word": "glasses",
                         "lemma": "glass",
-                        "entType": "",
+                        "entityType": null,
+                        "POS": "NOUN",
                         "tag": "NNS",
-                        "pos": "NOUN",
-                        "dep": "pobj",
+                        "relation": "pobj",
+                        "index": 10,
+                        "isStopWord": false,
                         "children": []
                     }
                 ]
@@ -126,11 +152,17 @@ Output:
             {
                 "word": ".",
                 "lemma": ".",
-                "entType": "",
+                "entityType": null,
+                "POS": "PUNCT",
                 "tag": ".",
-                "pos": "PUNCT",
-                "dep": "punct",
-                "children": []
+                "relation": "punct",
+                "index": 11,
+                "isStopWord": false,
+                "children": [],
+                "punct": {
+                    "type": null,
+                    "direction": null
+                }
             }
         ]
     }
